@@ -1,0 +1,14 @@
+/*
+* 算一个数字的二进制数有多少个1，return Integer.toBinaryString(n).replaceAll("0", "").length(); 也可以
+*/
+private static int NumberOf1_low(int n) {
+        int count = 0;
+        int flag = 1;
+        while (flag != 0) {
+            if ((n & flag) != 0) {
+                count++;
+            }
+            flag = flag << 1;
+        }
+        return count;
+    }
